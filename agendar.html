@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento | L'Élégance Nails</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="tema.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Estilos específicos da página de agendamento */
+    .secao-agendamento {
+      padding-top: 120px;
+      padding-bottom: 96px;
+      min-height: calc(100vh - 80px);
+    }
+
+    .agendamento-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-outline-variant);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--sombra-ambiente);
+    }
+
+    .agendamento__titulo {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .agendamento__subtitulo {
+      text-align: center;
+      color: var(--color-on-surface-variant);
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .form-grupo {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .form-grupo label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-on-surface);
+    }
+
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--color-outline-variant);
+      background: var(--color-surface-container-low);
+      color: var(--color-on-surface);
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-grupo input:focus,
+    .form-grupo select:focus,
+    .form-grupo textarea:focus {
+      border-color: var(--color-primary);
+    }
+
+    .form-linha {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .form-linha {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .btn-agendar {
+      width: 100%;
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <nav class="cabecalho__nav" aria-label="Navegação principal">
+      <div class="cabecalho__esquerda">
+        <img src="./assets/logo.png" alt="Logo L'Élégance Nails" class="cabecalho__logo" />
+        <span class="cabecalho__marca fonte-display">L'Élégance Nails</span>
+      </div>
+
+      <ul class="cabecalho__links" role="list">
+        <li><a class="cabecalho__link" href="./index.html#inicio">Início</a></li>
+        <li><a class="cabecalho__link" href="./index.html#sobre">Sobre Nós</a></li>
+        <li><a class="cabecalho__link" href="./index.html#servicos">Serviços</a></li>
+        <li><a class="cabecalho__link" href="./index.html#galeria">Galeria</a></li>
+      </ul>
+
+      <div class="cabecalho__acoes">
+        <button class="botao-tema" type="button" data-tema-toggle aria-pressed="false" aria-label="Ativar tema escuro">
+          <span class="material-symbols-outlined botao-tema__sol" aria-hidden="true">light_mode</span>
+          <span class="material-symbols-outlined botao-tema__lua" aria-hidden="true">dark_mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="secao-agendamento">
+      <div class="container">
+        <div class="agendamento-card">
+          <h1 class="agendamento__titulo fonte-display secao__titulo">Agende seu Horário</h1>
+          <p class="agendamento__subtitulo">Preencha os campos abaixo para solicitar a sua reserva via WhatsApp.</p>
+
+          <form id="formAgendamento">
+            <div class="form-grupo">
+              <label for="nome">Seu Nome Completo *</label>
+              <input type="text" id="nome" required placeholder="Ex: Maria Silva" />
+            </div>
+
+            <div class="form-grupo">
+              <label for="servico">Selecione o Serviço *</label>
+              <select id="servico" required>
+                <option value="" disabled selected>Escolha uma opção...</option>
+                <option value="Spa Manicure Signature">Spa Manicure Signature</option>
+                <option value="Alongamento em Gel">Alongamento em Gel</option>
+                <option value="Nail Art Minimalista">Nail Art Minimalista</option>
+                <option value="Esmaltação em Gel">Esmaltação em Gel</option>
+              </select>
+            </div>
+
+            <div class="form-linha">
+              <div class="form-grupo">
+                <label for="data">Data Desejada *</label>
+                <input type="date" id="data" required />
+              </div>
+
+              <div class="form-grupo">
+                <label for="horario">Horário Desejado *</label>
+                <select id="horario" required>
+                  <option value="" disabled selected>Escolha o horário...</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:30">17:30</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grupo">
+              <label for="observacoes">Observações (Opcional)</label>
+              <textarea id="observacoes" rows="3" placeholder="Ex: Alguma preferência de cor ou sensibilidade"></textarea>
+            </div>
+
+            <button type="submit" class="botao-primario btn-agendar">
+              <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+              Confirmar e Enviar no WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <div>
+        <p class="rodape__marca fonte-display">L'Élégance Nails</p>
+        <p class="rodape__descricao">Redefinindo o conceito de manicure de luxo através de precisão e sofisticação.</p>
+      </div>
+      <p class="rodape__copyright">© 2024 L'Élégance Nails. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <nav class="nav-inferior" aria-label="Navegação inferior mobile">
+    <ul class="nav-inferior__lista" role="list" style="list-style:none;padding:0;margin:0;">
+      <li><a class="nav-inferior__item" href="./index.html"><span class="material-symbols-outlined" aria-hidden="true">home</span>Home</a></li>
+      <li><a class="nav-inferior__item" href="./index.html#servicos"><span class="material-symbols-outlined" aria-hidden="true">content_cut</span>Serviços</a></li>
+      <li><a class="nav-inferior__item" href="./index.html#galeria"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>Galeria</a></li>
+      <li><a class="nav-inferior__item" href="./agendamento.html" aria-current="page"><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Agendar</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    document.getElementById('formAgendamento').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Número do WhatsApp (coloque o DDD + Número sem símbolos)
+      const numeroWhatsapp = "5500000000000"; 
+
+      const nome = document.getElementById('nome').value;
+      const servico = document.getElementById('servico').value;
+      const dataBruta = document.getElementById('data').value;
+      const horario = document.getElementById('horario').value;
+      const observacoes = document.getElementById('observacoes').value;
+
+      // Formatar data para DD/MM/AAAA
+      const partesData = dataBruta.split('-');
+      const dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
+
+      // Montar a mensagem do WhatsApp
+      let mensagem = `Olá, gostaria de solicitar um agendamento!\n\n`;
+      mensagem += `📌 *Nome:* ${nome}\n`;
+      mensagem += `💅 *Serviço:* ${servico}\n`;
+      mensagem += `📅 *Data:* ${dataFormatada}\n`;
+      mensagem += `⏰ *Horário:* ${horario}\n`;
+      if (observacoes.trim() !== '') {
+        mensagem += `📝 *Observações:* ${observacoes}\n`;
+      }
+      mensagem += `\nAguardando confirmação! ✨`;
+
+      // Redirecionar para o WhatsApp
+      const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galeria | L'Élégance Nails — Transformações Antes e Depois</title>
+<meta name="description" content="Veja transformações reais em antes e depois: alongamento em gel, nail art e esmaltação de luxo na L'Élégance Nails." />
+<meta name="keywords" content="galeria manicure, antes e depois unhas, alongamento em gel, nail art, esmaltação em gel" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.lelegancenails.com.br/galeria.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Galeria | L'Élégance Nails" />
+<meta property="og:description" content="Transformações reais de manicure de luxo, antes e depois." />
+<meta property="og:locale" content="pt_BR" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+<!-- Tema aplicado antes da renderização — mesma lógica/arquivo de todas as páginas -->
+<script src="tema.js"></script>
+<link rel="stylesheet" href="./galeria.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Galeria de transformações — L'Élégance Nails",
+  "description": "Transformações reais de manicure de luxo, antes e depois."
+}
+</script>
+</head>
+<body>
+
+<a href="#conteudo-principal" style="position:absolute;left:-9999px;">Pular para o conteúdo</a>
+
+<!-- Cabeçalho (idêntico ao das outras páginas, para manter o tema sincronizado) -->
+<header class="cabecalho">
+  <nav class="cabecalho__nav" aria-label="Navegação principal">
+    <div class="cabecalho__esquerda">
+      <img src="./assets/logo.png" alt="L'Élégance Nails Logo" class="cabecalho__logo" />
+      <span class="cabecalho__marca fonte-display">Galeria</span>
+    </div>
+
+    <ul class="cabecalho__links" role="list">
+      <li><a class="cabecalho__link" href="#inicio" aria-current="page">Início</a></li>
+      <li><a class="cabecalho__link" href="#sobre">Sobre Nós</a></li>
+      <li><a class="cabecalho__link" href="#servicos">Serviços</a></li>
+      <li><a class="cabecalho__link" href="#galeria">Galeria</a></li>
+    </ul>
+
+    <div class="cabecalho__acoes">
+      <button class="botao-tema" type="button" data-tema-toggle aria-pressed="false" aria-label="Ativar tema escuro">
+        <span class="material-symbols-outlined botao-tema__sol" aria-hidden="true">light_mode</span>
+        <span class="material-symbols-outlined botao-tema__lua" aria-hidden="true">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo-principal" class="pagina-galeria">
+
+  <!-- Introdução da galeria -->
+  <section class="container galeria__intro" aria-labelledby="galeria-titulo">
+    <span class="secao__eyebrow">Portfólio Exclusivo</span>
+    <h1 id="galeria-titulo" class="secao__titulo fonte-display" style="font-size:32px;">Transformações: Antes &amp; Depois</h1>
+    <p>
+      Explore a excelência em cada detalhe. Nossas transformações elevam a autoestima e celebram a beleza única de
+      cada cliente através de técnicas avançadas e acabamento impecável.
+    </p>
+  </section>
+
+  <!-- Grade de comparações (bento) -->
+  <section class="container galeria__grade" aria-label="Transformações em destaque">
+
+    <!-- Comparador Antes/Depois principal -->
+    <article class="galeria__destaque revelar">
+      <div
+        class="comparador"
+        id="comparador-principal"
+        role="slider"
+        aria-label="Deslize para comparar antes e depois do alongamento em gel"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="50"
+        tabindex="0"
+      >
+        <div class="comparador__depois">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD6Wp69vcwnxwJx7AXYkY6btSAf0QFmxgEm6x5q-fKyB8-xDojHVKXCQZnn_WeZbfpseVco4FlgEcdtfHSj4KrslIBqDrbrP9_in1GQSFBdlD_Tz_Ls7nOytGEPEQ--8kX7z9zKT_2xeWHeaUie1td9HIBFn6rpd_olcYmNodHjc2V8MK0ojtziLJlpm-kh6h38MwdjIpT3YisEDnLcpz39ZVizUHfrDbFaORBVlgWcQdLIP5efUmswpId2ti1ot1HR-INeKNNUmI"
+            alt="Manicure finalizada com acabamento rose gold"
+            loading="eager"
+          />
+        </div>
+        <div class="comparador__antes" id="comparador-clip">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMeedjnwv2VW_u6GAcerqAha-Ez_7s497Ywa8GafuimOcL_wkoUySDYCey_zUXnQfGI7wciF93C6kqWc5_xFpAMILoXK9vQg3h-VTJl9Pc0-j3nv5gfTqgLyIcOkY_-FV_RHScIyvUHLudYuEydOQFpl9C4UQostECIJGeE1IgEcm-oxduH2VPf4qsmHUwxAJrsZmrToRXpJXlV7M0ENtVyTFhxl8beUKpLXsNvStuG4KY3dQln6tl1Qq84dd-teoAQCCxfrPmHg"
+            alt="Unhas naturais antes do atendimento"
+            loading="lazy"
+          />
+        </div>
+        <div class="comparador__alca" id="comparador-alca">
+          <div class="comparador__alca-botao">
+            <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span>
+          </div>
+        </div>
+        <span class="comparador__etiqueta comparador__etiqueta--antes">Antes</span>
+        <span class="comparador__etiqueta comparador__etiqueta--depois">Depois</span>
+      </div>
+
+      <div class="galeria__destaque-info">
+        <div class="galeria__destaque-cabecalho">
+          <div>
+            <h3 class="fonte-display">Alongamento em Gel Premium</h3>
+            <p>"A delicadeza do acabamento natural combinada com a resistência do gel."</p>
+          </div>
+          <span class="selo-destaque">Top Service</span>
+        </div>
+        <div class="galeria__destaque-tecnica">
+          <span class="galeria__destaque-avatar" aria-hidden="true">L'E</span>
+          <span>Técnica: Escultural com Rose Gold Chrome</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Coluna lateral -->
+    <div class="galeria__coluna-lateral">
+      <article class="galeria__card-secundario revelar">
+        <div class="galeria__card-secundario-imagem">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsT4K11V112H-inXJppjUr14izXqFzywjLsXcOpfP8JxJ3bCriU4BIgDm-LSAZLF8WONGSI-PWLbLCH0naZEJAzFgoQJXYGVpCc_8tv9OVh40fVuN9v-GaxDfuZx_yYl2-1v4jcnInB5Q770xfsKhIhsd9u1akUtf7bZqBzek8IpzN9-SDc-aVaA9DMBulH-VfENF8w39UgLw49Oicf35FVNKtWYf22fBEbIv91d11lnrOrme9_Edik8X-d5lzF1rRGovJVrZT74"
+            alt="French tip em unhas amendoadas com tom marfim"
+            loading="lazy"
+          />
+          <div class="galeria__card-secundario-overlay">Ver Detalhes</div>
+        </div>
+        <div class="galeria__card-secundario-texto">
+          <h4 class="fonte-display">Banho de Gel</h4>
+          <p>Fortalecimento e brilho duradouro para unhas naturais.</p>
+        </div>
+      </article>
+
+      <div class="galeria__cta revelar">
+        <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+        <h4 class="fonte-display">Sua vez de brilhar</h4>
+        <p>Resultados que duram até 4 semanas com manutenção profissional.</p>
+        <button type="button" onclick="window.location.href='https://wa.me/'">Agendar Agora</button>
+      </div>
+    </div>
+
+    <!-- Itens simples -->
+    <article class="galeria__item revelar">
+      <div class="galeria__item-imagem">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Uweyg8M4mnqW2olO3HKUJrCV78XSlYOt2JKB6EPGHJyP0Nj_VbJclOqKG04cmDaAXwkkj1VYxjZ8ykMY6hJ71IE31vnm_Rj46KoBjRofmvF25sikCiaGAaT2cyBIBdTHw6YVRj7HIklpA2t12bMhC2C4Gdgeef6L2hMqd9xG1b__1Vwjp7GyHQmnpFgrwwZUw2ahjTGavvvewmEyvNKuuLlIX_cNn-fIpDTCPfYZFbEnIszCRffIflz-l4CHqTQhFTJp1QHVdH0"
+          alt="Unhas estilo stiletto vermelhas com detalhes em folha de ouro"
+          loading="lazy"
+        />
+      </div>
+      <div class="galeria__item-texto">
+        <h4 class="fonte-display">Nail Art Artística</h4>
+        <p>Design exclusivo feito à mão com detalhes em folha de ouro.</p>
+      </div>
+    </article>
+
+    <article class="galeria__item revelar">
+      <div class="galeria__item-imagem">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbHTQFA4SRgFO0JYYVUA6kZyn1SR97qE-ttHxtNI7J4ieFrcMXMhegLm6-hxPTRYbPC_uwnr_cXhE6TSwe0cBzVjeoGd_1zkm0tIus7JPm5c9bTeGsiYHVI4H2RaW-sclcgRedpQ-33h_k5k9vZ0zOX93YuZF-Hke7QBei8Z1ZMNcb5TLfb1LfdXUgbIUuVlcGfpF-WHaLGNoRI_3Y-KjtITigsp4W0LC8zIar4yHkKV-FX7yO6MOMod_jN1xnEFbGVFy6SxMYuA"
+          alt="Manicure nude minimalista em unhas quadradas curtas"
+          loading="lazy"
+        />
+      </div>
+      <div class="galeria__item-texto">
+        <h4 class="fonte-display">Esmaltação em Gel</h4>
+        <p>Cores vibrantes que não descascam e brilho espelhado.</p>
+      </div>
+    </article>
+
+    <article class="galeria__item revelar">
+      <div class="galeria__item-imagem">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhSkLTlur9iZ4ogK3FNn54zMq7-y6YEJ6G34Nv_1dWK_1eNJ_TCfRGU0PBaOc2aqSIPH8nWOcvfptvI85Q72KQtcrPrdBoqtumoZN9jemGQZd_M21PMyCTrHaWcrxR_yLC7LeQ7LM01ibf3uRcJbWUP9fRznC_eiEK37Eea1hjbmGL_KTiWU6ICy4mBRzl9Usp5Q2G4aK_L7UTBeppZvx_q8u3fzka95x-aWa2_FbGqJ3bGWVWqMLeIU9mP15f2Wn2cb34FbusLp4"
+          alt="Manicure de noiva em tons de rosa e branco com brilho"
+          loading="lazy"
+        />
+      </div>
+      <div class="galeria__item-texto">
+        <h4 class="fonte-display">Especial Noivas</h4>
+        <p>Sofisticação e delicadeza para o seu grande dia.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- Estatísticas -->
+  <section class="galeria__estatisticas" aria-label="Números da L'Élégance Nails">
+    <dl class="container galeria__estatisticas-grade">
+      <div>
+        <dd class="galeria__estatisticas-numero fonte-display">2k+</dd>
+        <dt class="galeria__estatisticas-rotulo">Transformações</dt>
+      </div>
+      <div>
+        <dd class="galeria__estatisticas-numero fonte-display">99%</dd>
+        <dt class="galeria__estatisticas-rotulo">Satisfação</dt>
+      </div>
+      <div>
+        <dd class="galeria__estatisticas-numero fonte-display">15</dd>
+        <dt class="galeria__estatisticas-rotulo">Especialistas</dt>
+      </div>
+      <div>
+        <dd class="galeria__estatisticas-numero fonte-display">5★</dd>
+        <dt class="galeria__estatisticas-rotulo">Avaliações</dt>
+      </div>
+    </dl>
+  </section>
+
+</main>
+
+<!-- Rodapé (idêntico ao das outras páginas) -->
+<footer class="rodape">
+  <div class="container rodape__conteudo">
+    <div>
+      <p class="rodape__marca fonte-display">L'Élégance Nails</p>
+      <p class="rodape__descricao">Redefinindo o conceito de manicure de luxo através de precisão e sofisticação.</p>
+    </div>
+
+    <nav aria-label="Links do rodapé">
+      <ul class="rodape__links" role="list" style="list-style:none;padding:0;margin:0;">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos</a></li>
+      </ul>
+    </nav>
+
+    <div class="rodape__redes">
+      <a href="#" aria-label="Instagram"><span class="material-symbols-outlined" aria-hidden="true">camera</span></a>
+      <a href="https://wa.me/" aria-label="WhatsApp"><span class="material-symbols-outlined" aria-hidden="true">chat</span></a>
+    </div>
+
+    <p class="rodape__copyright">© 2024 L'Élégance Nails. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Navegação inferior (mobile) -->
+<nav class="nav-inferior" aria-label="Navegação inferior mobile">
+  <ul class="nav-inferior__lista" role="list" style="list-style:none;padding:0;margin:0;">
+    <li><a class="nav-inferior__item" href="index.html"><span class="material-symbols-outlined" aria-hidden="true">home</span>Home</a></li>
+    <li><a class="nav-inferior__item" href="index.html#servicos"><span class="material-symbols-outlined" aria-hidden="true">content_cut</span>Serviços</a></li>
+    <li><a class="nav-inferior__item" href="galeria.html" aria-current="page"><span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings:'FILL' 1;">auto_stories</span>Galeria</a></li>
+    <li><a class="nav-inferior__item" href=""><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Agendar</a></li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Revelação ao rolar
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('revelar--visivel');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.revelar').forEach(function (el) {
+      observador.observe(el);
+    });
+
+    // Menu mobile
+    var botaoMenu = document.querySelector('.cabecalho__menu-mobile');
+    var links = document.querySelector('.cabecalho__links');
+    if (botaoMenu && links) {
+      botaoMenu.addEventListener('click', function () {
+        var aberto = botaoMenu.getAttribute('aria-expanded') === 'true';
+        botaoMenu.setAttribute('aria-expanded', String(!aberto));
+        links.style.display = aberto ? '' : 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '80px';
+        links.style.left = '0';
+        links.style.right = '0';
+        links.style.background = 'var(--color-surface)';
+        links.style.padding = '16px 20px';
+        links.style.borderBottom = '1px solid var(--color-outline-variant)';
+      });
+    }
+
+    // Slider Antes/Depois (mouse, touch e teclado)
+    var comparador = document.getElementById('comparador-principal');
+    var clip = document.getElementById('comparador-clip');
+    var alca = document.getElementById('comparador-alca');
+    var arrastando = false;
+
+    function atualizarPosicao(x) {
+      var rect = comparador.getBoundingClientRect();
+      var posicao = ((x - rect.left) / rect.width) * 100;
+      posicao = Math.max(0, Math.min(100, posicao));
+      clip.style.clipPath = 'inset(0 ' + (100 - posicao) + '% 0 0)';
+      alca.style.left = posicao + '%';
+      comparador.setAttribute('aria-valuenow', Math.round(posicao));
+    }
+
+    function coordenadaX(evento) {
+      return evento.touches ? evento.touches[0].clientX : evento.clientX;
+    }
+
+    comparador.addEventListener('mousedown', function () { arrastando = true; });
+    comparador.addEventListener('touchstart', function () { arrastando = true; }, { passive: true });
+    window.addEventListener('mousemove', function (e) { if (arrastando) atualizarPosicao(coordenadaX(e)); });
+    window.addEventListener('touchmove', function (e) { if (arrastando) atualizarPosicao(coordenadaX(e)); }, { passive: true });
+    window.addEventListener('mouseup', function () { arrastando = false; });
+    window.addEventListener('touchend', function () { arrastando = false; });
+
+    // Acessibilidade: setas do teclado movem o slider em passos de 5%
+    comparador.addEventListener('keydown', function (e) {
+      var atual = parseFloat(comparador.getAttribute('aria-valuenow')) || 50;
+      if (e.key === 'ArrowLeft') { atual = Math.max(0, atual - 5); }
+      else if (e.key === 'ArrowRight') { atual = Math.min(100, atual + 5); }
+      else { return; }
+      e.preventDefault();
+      clip.style.clipPath = 'inset(0 ' + (100 - atual) + '% 0 0)';
+      alca.style.left = atual + '%';
+      comparador.setAttribute('aria-valuenow', atual);
+    });
+  });
+</script>
+</body>
+</html>
