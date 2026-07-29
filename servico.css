@@ -167,7 +167,7 @@ button {
 
 /* Estilização da Logo */
 .cabecalho__logo {
-  height: 40px; /* Ajuste a altura desejada da sua logo aqui */
+  height: 60px; /* Ajuste a altura desejada da sua logo aqui */
   width: auto;
   object-fit: contain;
 }
@@ -191,8 +191,12 @@ button {
 }
 @media (min-width: 768px) {
   .cabecalho__links {
-    display: flex;
-  }
+ display: flex;
+  /* Adicione estas 3 linhas abaixo para sumir com os pontos e alinhar perfeitamente: */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 }
 
 .cabecalho__link {
@@ -524,6 +528,24 @@ button {
 .rodape__links a:hover {
   color: var(--color-primary);
   opacity: 1;
+}
+.rodape__redes {
+  display: flex;
+  gap: 16px;
+}
+.rodape__redes a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-outline-variant);
+  color: var(--color-primary);
+  transition: background 0.3s ease;
+}
+.rodape__redes a:hover {
+  background: color-mix(in srgb, var(--color-primary-container) 25%, transparent);
 }
 .rodape__copyright {
   color: var(--color-on-surface-variant);

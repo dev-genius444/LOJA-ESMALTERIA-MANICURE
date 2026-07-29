@@ -179,7 +179,7 @@ button {
 
 /* Estilização da Logo */
 .cabecalho__logo {
-  height: 40px; /* Ajuste a altura desejada da sua logo aqui */
+  height: 60px; /* Ajuste a altura desejada da sua logo aqui */
   width: auto;
   object-fit: contain;
 }
@@ -203,8 +203,12 @@ button {
 }
 @media (min-width: 768px) {
   .cabecalho__links {
-    display: flex;
-  }
+ display: flex;
+  /* Adicione estas 3 linhas abaixo para sumir com os pontos e alinhar perfeitamente: */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 }
 
 .cabecalho__link {
